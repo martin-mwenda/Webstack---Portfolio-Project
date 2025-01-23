@@ -2,8 +2,7 @@
   "name": "farm_management_app",
   "version": "1.0.0",
   "description": "This project provides a backend API for a farm management application. It utilizes Node.js, Express.js, Mongoose, and MongoDB to manage data related to farm operations.",
-  "main": ".eslintrc.js",
-  "type": "module",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
