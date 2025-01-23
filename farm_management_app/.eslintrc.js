@@ -22,14 +22,10 @@ module.exports = {
     'no-shadow': 'off',
     'no-restricted-syntax': [
       'error',
-      'LabeledStatement',
-      'WithStatement',
+      {
+        selector: 'WithStatement',
+        message: 'Avoid using `with` statements.',
+      },
     ],
   },
-  overrides:[
-    {
-      files: ['*.js'],
-      excludedFiles: 'babel.config.js',
-    }
-  ]
 };
