@@ -1,16 +1,15 @@
 const express = require('express');
-const { getExpenses, addExpense, updateExpense, deleteExpense } = require('../controllers/expenseController');
+const { getExpenses, addExpense, deleteExpense } = require('../controllers/expenseController');
 const { protect } = require('../middlewares/authMiddleware');
 
 const router = express.Router();
 
 // Expense Routes
 router.route('/')
-  .get(protect, getExpenses)
-  .post(protect, addExpense);
+  .get(protect, getExpenses) // Fetch all expenses and calculate total
+  .post(protect, addExpense); // Add a new expense
 
 router.route('/:id')
-  .put(protect, updateExpense)
-  .delete(protect, deleteExpense);
+  .delete(protect, deleteExpense); // Delete an expense by ID
 
 module.exports = router;

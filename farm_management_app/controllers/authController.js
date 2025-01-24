@@ -1,6 +1,6 @@
-const User = require('../models/User'); 
-const asyncHandler = require('express-async-handler'); 
-const generateToken = require('../utils/generateToken'); // Assuming you have a generateToken function in utils/generateToken.js
+const User = require('../models/User');
+const asyncHandler = require('express-async-handler');
+const generateToken = require('../utils/generateToken'); // to generateToken, function in utils/generateToken.js
 
 // @desc    Register a new user
 // @route   POST /api/auth/register
@@ -60,4 +60,5 @@ const loginUser = asyncHandler(async (req, res) => {
   }
 });
 
+// Export both functions
 module.exports = { registerUser, loginUser };
